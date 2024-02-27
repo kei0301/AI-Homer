@@ -271,117 +271,141 @@ const App = () => {
       duration: 0.8,
     });
 
-    gsap.to(".k-img1", {
-      y: -1000,
-      duration:30,
-    });
-    gsap.to(".k-img2", { y: -1400, duration:30 });
-    gsap.to(".k-img3", {
-      y: -1200,
-      duration:30,
-    });
-    gsap.to(
-      ".k-img4",
-      {
-        y: -1600,
-        duration: 18,
-      },
-      "-=29"
-    );
-    gsap.to(".k-img5", { y: -1700, duration:30 }, "-=26");
-    gsap.to(
-      ".k-img6",
-      {
-        y: -1500,
-        duration:30,
-      },
-      "-=27"
-    );
-    gsap.to(
-      ".k-img7",
-      {
-        y: -1600,
-        duration: 18,
-      },
-      "-=29"
-    );
-    gsap.to(".k-img8", { y: -1700, duration:30 }, "-=26");
-    gsap.to(
-      ".k-img9",
-      {
-        y: -1500,
-        duration:30,
-      },
-      "-=27"
-    );
-    gsap.to(
-      ".k-img10",
-      {
-        y: -1600,
-        duration: 18,
-      },
-      "-=29"
-    );
-    gsap.to(".k-img11", { y: -1700, duration:30 }, "-=26");
-    gsap.to(
-      ".k-img12",
-      {
-        y: -1500,
-        duration:30,
-      },
-      "-=27"
-    );
-    gsap.to(
-      ".k-img13",
-      {
-        y: -1600,
-        duration: 18,
-      },
-      "-=29"
-    );
-    gsap.to(".k-img14", { y: -1700, duration:30 }, "-=26");
-    gsap.to(
-      ".k-img15",
-      {
-        y: -1500,
-        duration:30,
-      },
-      "-=27"
-    );
-    gsap.to(
-      ".k-img16",
-      {
-        y: -1600,
-        duration: 18,
-      },
-      "-=29"
-    );
-    gsap.to(".k-img17", { y: -1700, duration:30 }, "-=26");
-    gsap.to(
-      ".k-img18",
-      {
-        y: -1500,
-        duration:30,
-      },
-      "-=27"
-    );
-    gsap.to(
-      ".k-img19",
-      {
-        y: -1600,
-        duration: 18,
-      },
-      "-=29"
-    );
-    gsap.to(".k-img20", { y: -1700, duration:30 }, "-=26");
-    gsap.to(
-      ".k-img21",
-      {
-        y: -1500,
-        duration:30,
-      },
-      "-=27"
-    );
+    const tl = gsap.timeline({ repeat: -1 });
+
+    tl.to(".k-img1", { y: -1000, duration: 30 })
+      .to(".k-img2", { y: -1400, duration: 30 }, "-=30")
+      .to(".k-img3", { y: -1200, duration: 30 }, "-=30")
+      .to(".k-img4", { y: -1600, duration: 18 }, "-=29")
+      .to(".k-img5", { y: -1700, duration: 30 }, "-=26")
+      .to(".k-img6", { y: -1500, duration: 30 }, "-=27")
+      .to(".k-img7", { y: -1600, duration: 18 }, "-=29")
+      .to(".k-img8", { y: -1700, duration: 30 }, "-=26")
+      .to(".k-img9", { y: -1500, duration: 30 }, "-=27")
+      .to(".k-img10", { y: -1600, duration: 18 }, "-=29")
+      .to(".k-img11", { y: -1700, duration: 30 }, "-=26")
+      .to(".k-img12", { y: -1500, duration: 30 }, "-=27")
+      .to(".k-img13", { y: -1600, duration: 18 }, "-=29")
+      .to(".k-img14", { y: -1700, duration: 30 }, "-=26")
+      .to(".k-img15", { y: -1500, duration: 30 }, "-=27")
+      .to(".k-img16", { y: -1600, duration: 18 }, "-=29")
+      .to(".k-img17", { y: -1700, duration: 30 }, "-=26")
+      .to(".k-img18", { y: -1500, duration: 30 }, "-=27")
+      .to(".k-img19", { y: -1600, duration: 18 }, "-=29")
+      .to(".k-img20", { y: -1700, duration: 30 }, "-=26")
+      .to(".k-img21", { y: -1500, duration: 30 }, "-=27");
+
+    // gsap.to(".k-img1", {
+    //   y: -1000,
+    //   duration: 30,
+    // });
+    // gsap.to(".k-img2", { y: -1400, duration: 30 });
+    // gsap.to(".k-img3", {
+    //   y: -1200,
+    //   duration: 30,
+    // });
+    // gsap.to(
+    //   ".k-img4",
+    //   {
+    //     y: -1600,
+    //     duration: 18,
+    //   },
+    //   "-=29"
+    // );
+    // gsap.to(".k-img5", { y: -1700, duration: 30 }, "-=26");
+    // gsap.to(
+    //   ".k-img6",
+    //   {
+    //     y: -1500,
+    //     duration: 30,
+    //   },
+    //   "-=27"
+    // );
+    // gsap.to(
+    //   ".k-img7",
+    //   {
+    //     y: -1600,
+    //     duration: 18,
+    //   },
+    //   "-=29"
+    // );
+    // gsap.to(".k-img8", { y: -1700, duration: 30 }, "-=26");
+    // gsap.to(
+    //   ".k-img9",
+    //   {
+    //     y: -1500,
+    //     duration: 30,
+    //   },
+    //   "-=27"
+    // );
+    // gsap.to(
+    //   ".k-img10",
+    //   {
+    //     y: -1600,
+    //     duration: 18,
+    //   },
+    //   "-=29"
+    // );
+    // gsap.to(".k-img11", { y: -1700, duration: 30 }, "-=26");
+    // gsap.to(
+    //   ".k-img12",
+    //   {
+    //     y: -1500,
+    //     duration: 30,
+    //   },
+    //   "-=27"
+    // );
+    // gsap.to(
+    //   ".k-img13",
+    //   {
+    //     y: -1600,
+    //     duration: 18,
+    //   },
+    //   "-=29"
+    // );
+    // gsap.to(".k-img14", { y: -1700, duration: 30 }, "-=26");
+    // gsap.to(
+    //   ".k-img15",
+    //   {
+    //     y: -1500,
+    //     duration: 30,
+    //   },
+    //   "-=27"
+    // );
+    // gsap.to(
+    //   ".k-img16",
+    //   {
+    //     y: -1600,
+    //     duration: 18,
+    //   },
+    //   "-=29"
+    // );
+    // gsap.to(".k-img17", { y: -1700, duration: 30 }, "-=26");
+    // gsap.to(
+    //   ".k-img18",
+    //   {
+    //     y: -1500,
+    //     duration: 30,
+    //   },
+    //   "-=27"
+    // );
+    // gsap.to(
+    //   ".k-img19",
+    //   {
+    //     y: -1600,
+    //     duration: 18,
+    //   },
+    //   "-=29"
+    // );
+    // gsap.to(".k-img20", { y: -1700, duration: 30 }, "-=26");
+    // gsap.to(
+    //   ".k-img21",
+    //   {
+    //     y: -1500,
+    //     duration: 30,
+    //   },
+    //   "-=27"
+    // );
   };
 
   const OnLeave = () => {

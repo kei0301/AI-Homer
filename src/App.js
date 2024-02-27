@@ -58,8 +58,6 @@ const ParticleEngine = function (x, y, color, rows) {
           Math.sin(t * 3.2) * Math.tan(Math.sin(t * 0.8)) * this.h * 0.45;
       }
 
-      console.log(NUM_PARTICLES, "NUM_PARTICLES00000");
-
       for (var i = 0; i < NUM_PARTICLES; i++) {
         if (this.list[i]) {
           var p = this.list[i];
@@ -86,7 +84,6 @@ const ParticleEngine = function (x, y, color, rows) {
     ctx.save();
     ctx.translate(this.marginLeft, this.marginTop);
     ctx.fillStyle = this.color;
-    console.log(NUM_PARTICLES, "NUM_PARTICLES----");
     for (var i = 0; i < NUM_PARTICLES; i++) {
       if (this.list[i]) {
         ctx.beginPath();
@@ -154,10 +151,7 @@ const App = () => {
 
     try {
       const response = await axios.post(ENDPOINT_URL, data, { headers });
-      console.log("Airtable record created successfully", response.data);
-    } catch (error) {
-      console.error(`An error occurred: ${error.message}`);
-    }
+    } catch (error) {}
   };
 
   const validateFirstName = () => {
@@ -253,7 +247,6 @@ const App = () => {
     mx = e.clientX - bounds.left;
     my = e.clientY - bounds.top;
     man = true;
-    console.log(1);
   };
 
   const init = () => {
@@ -278,110 +271,116 @@ const App = () => {
       duration: 0.8,
     });
 
-    gsap.fromTo(
-      ".k-img1",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1, duration: 25, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
-      ".k-img2",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 300, duration: 25, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
-      ".k-img3",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 600, duration: 25, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img1", {
+      y: -1000,
+      duration:30,
+    });
+    gsap.to(".k-img2", { y: -1400, duration:30 });
+    gsap.to(".k-img3", {
+      y: -1200,
+      duration:30,
+    });
+    gsap.to(
       ".k-img4",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 900, duration: 25, yoto: true, repeat: -1 }
+      {
+        y: -1600,
+        duration: 18,
+      },
+      "-=29"
     );
-    gsap.fromTo(
-      ".k-img5",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 1200, duration: 30, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img5", { y: -1700, duration:30 }, "-=26");
+    gsap.to(
       ".k-img6",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 1500, duration: 30, yoto: true, repeat: -1 }
+      {
+        y: -1500,
+        duration:30,
+      },
+      "-=27"
     );
-    gsap.fromTo(
+    gsap.to(
       ".k-img7",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 1800, duration: 30, yoto: true, repeat: -1 }
+      {
+        y: -1600,
+        duration: 18,
+      },
+      "-=29"
     );
-    gsap.fromTo(
-      ".k-img8",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 2100, duration: 30, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img8", { y: -1700, duration:30 }, "-=26");
+    gsap.to(
       ".k-img9",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 2400, duration: 30, yoto: true, repeat: -1 }
+      {
+        y: -1500,
+        duration:30,
+      },
+      "-=27"
     );
-    gsap.fromTo(
+    gsap.to(
       ".k-img10",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 2700, duration: 36, yoto: true, repeat: -1 }
+      {
+        y: -1600,
+        duration: 18,
+      },
+      "-=29"
     );
-    gsap.fromTo(
-      ".k-img11",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 3000, duration: 36, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img11", { y: -1700, duration:30 }, "-=26");
+    gsap.to(
       ".k-img12",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 3300, duration: 36, yoto: true, repeat: -1 }
+      {
+        y: -1500,
+        duration:30,
+      },
+      "-=27"
     );
-    gsap.fromTo(
+    gsap.to(
       ".k-img13",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 3600, duration: 36, yoto: true, repeat: -1 }
+      {
+        y: -1600,
+        duration: 18,
+      },
+      "-=29"
     );
-    gsap.fromTo(
-      ".k-img14",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 3900, duration: 42, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img14", { y: -1700, duration:30 }, "-=26");
+    gsap.to(
       ".k-img15",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 4200, duration: 42, yoto: true, repeat: -1 }
+      {
+        y: -1500,
+        duration:30,
+      },
+      "-=27"
     );
-    gsap.fromTo(
+    gsap.to(
       ".k-img16",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 4500, duration: 42, yoto: true, repeat: -1 }
+      {
+        y: -1600,
+        duration: 18,
+      },
+      "-=29"
     );
-    gsap.fromTo(
-      ".k-img17",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 4800, duration: 42, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img17", { y: -1700, duration:30 }, "-=26");
+    gsap.to(
       ".k-img18",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 5100, duration: 42, yoto: true, repeat: -1 }
+      {
+        y: -1500,
+        duration:30,
+      },
+      "-=27"
     );
-    gsap.fromTo(
+    gsap.to(
       ".k-img19",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 5400, duration: 47, yoto: true, repeat: -1 }
+      {
+        y: -1600,
+        duration: 18,
+      },
+      "-=29"
     );
-    gsap.fromTo(
-      ".k-img20",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 5700, duration: 47, yoto: true, repeat: -1 }
-    );
-    gsap.fromTo(
+    gsap.to(".k-img20", { y: -1700, duration:30 }, "-=26");
+    gsap.to(
       ".k-img21",
-      { y: 0, duration: 1, yoto: true, repeat: -1 },
-      { y: window.innerHeight * -1 - 6000, duration: 47, yoto: true, repeat: -1 }
+      {
+        y: -1500,
+        duration:30,
+      },
+      "-=27"
     );
   };
 
@@ -706,7 +705,7 @@ const App = () => {
             style={{
               width: "750px",
               height: "900px",
-              bottom: "-300px",
+              bottom: "-400px",
               left: "20%",
               position: "absolute",
               borderRadius: "20px",
@@ -720,7 +719,7 @@ const App = () => {
             style={{
               width: "750px",
               height: "900px",
-              bottom: "-600px",
+              bottom: "-200px",
               left: "60%",
               position: "absolute",
               borderRadius: "20px",
@@ -734,7 +733,7 @@ const App = () => {
             style={{
               width: "750px",
               height: "900px",
-              bottom: "-900px",
+              bottom: "-800px",
               left: "40%",
               position: "absolute",
               borderRadius: "20px",
@@ -746,12 +745,12 @@ const App = () => {
           <img
             className="k-img k-img5"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-1200px",
-              left:"-10%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "-10%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2bb786e8d72738ffcd_img5.png"
@@ -760,12 +759,54 @@ const App = () => {
           <img
             className="k-img k-img6"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-1500px",
-              left:"22%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "22%",
+              position: "absolute",
+              borderRadius: "20px",
+            }}
+            src={
+              "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b4c2414d37951ef6d_img6.png"
+            }
+          />
+          <img
+            className="k-img k-img4"
+            style={{
+              width: "750px",
+              height: "900px",
+              bottom: "-800px",
+              left: "40%",
+              position: "absolute",
+              borderRadius: "20px",
+            }}
+            src={
+              "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b4cc259bd75cf1d0f_img4.png"
+            }
+          />
+          <img
+            className="k-img k-img5"
+            style={{
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "-10%",
+              position: "absolute",
+              borderRadius: "20px",
+            }}
+            src={
+              "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2bb786e8d72738ffcd_img5.png"
+            }
+          />
+          <img
+            className="k-img k-img6"
+            style={{
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "22%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b4c2414d37951ef6d_img6.png"
@@ -774,12 +815,12 @@ const App = () => {
           <img
             className="k-img k-img7"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-1800px",
-              left:"37%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-800px",
+              left: "50%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b66dd91bde7b97abd_img7.png"
@@ -788,12 +829,12 @@ const App = () => {
           <img
             className="k-img k-img8"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-2100px",
-              left:"50%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "30%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b40048e0942e0796e_img8.png"
@@ -802,12 +843,12 @@ const App = () => {
           <img
             className="k-img k-img9"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-2400px",
-              left:"70%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "62%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b6b39ce13633bb4ed_img9.png"
@@ -816,12 +857,12 @@ const App = () => {
           <img
             className="k-img k-img10"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-2700px",
-              left:"40%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-800px",
+              left: "37%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b76bfcb2c3235f8e4_img10.png"
@@ -830,12 +871,12 @@ const App = () => {
           <img
             className="k-img k-img11"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-3000px",
-              left:"20%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "-11%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b9ab60c23e9887f69_img11.png"
@@ -844,12 +885,12 @@ const App = () => {
           <img
             className="k-img k-img12"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-3300px",
-              left:"60%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "55%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b2e32cf993fa58db8_img12.png"
@@ -858,12 +899,12 @@ const App = () => {
           <img
             className="k-img k-img13"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-3600px",
-              left:"0%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-800px",
+              left: "22%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2bd6de1a3a4470ee01_img13.png"
@@ -872,12 +913,12 @@ const App = () => {
           <img
             className="k-img k-img14"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-3900px",
-              left:"50%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "61%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b1feb519841f147be_img14.png"
@@ -886,12 +927,12 @@ const App = () => {
           <img
             className="k-img k-img15"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-4200px",
-              left:"10%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "35%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b61d46b95ecd6c1ad_img15.png"
@@ -900,12 +941,12 @@ const App = () => {
           <img
             className="k-img k-img16"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-4500px",
-              left:"-10%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-800px",
+              left: "42%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b1feb519841f147c5_img16.png"
@@ -914,12 +955,12 @@ const App = () => {
           <img
             className="k-img k-img17"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-4800px",
-              left:"30%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "-5%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b652ca384ee731f12_img17.png"
@@ -928,12 +969,12 @@ const App = () => {
           <img
             className="k-img k-img18"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-5100px",
-              left:"70%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "65%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b8e3df4316dd81064_img18.png"
@@ -942,12 +983,12 @@ const App = () => {
           <img
             className="k-img k-img19"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-5400px",
-              left:"-15%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-800px",
+              left: "12%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2bfccc1bda10131357_img19.png"
@@ -956,12 +997,12 @@ const App = () => {
           <img
             className="k-img k-img20"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-5700px",
-              left:"40%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-900px",
+              left: "45%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2bd003631cf0be4e3d_img20.png"
@@ -970,12 +1011,12 @@ const App = () => {
           <img
             className="k-img k-img21"
             style={{
-              width:"750px",
-              height:"900px",
-              bottom:"-6000px",
-              left:"14%",
-              position:"absolute",
-              borderRadius:"20px"
+              width: "750px",
+              height: "900px",
+              bottom: "-600px",
+              left: "70%",
+              position: "absolute",
+              borderRadius: "20px",
             }}
             src={
               "https://uploads-ssl.webflow.com/65d4dce41fa4e79e47568713/65d79e2b79e56030f41d5a57_img21.png"

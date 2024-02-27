@@ -1,0 +1,98 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./assets/scss/override.scss";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: linear-gradient(
+    180deg,
+    #dcdbd2 0%,
+    rgba(220, 219, 210, 0.6) 100%
+  );
+}
+
+.lato-family {
+  font-family: "Lato", sans-serif;
+}
+
+.space-family {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.merry-family {
+  font-family: "Merriweather", serif;
+}
+
+.btn-shadow {
+  box-shadow: 0px 0px 20px 0px rgba(48, 47, 39, 0.11);
+}
+
+.shadow-popup {
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
+}
+
+.k-img {
+  opacity: 0;
+}
+
+.k-Homer {
+  font-size: 7rem;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.k-m-IM {
+  font-size: 2rem !important;
+  text-align: left;
+  font-weight: 700;
+  width: 70%;
+}
+
+.k-IM {
+  font-size: 2rem !important;
+  width: 40%;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.9px;
+}
+
+.k-m-AI {
+  font-size: 2rem !important;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.k-AI {
+  font-size: 3rem !important;
+  font-weight: 400;
+  line-height: 4rem;
+  text-align: left;
+  width: 100%;
+  padding-top: 4rem;
+  padding-left: 45%;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.k-pos1 {
+  position: relative;
+}
+
+.k-pos2 {
+  position: relative;
+}

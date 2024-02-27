@@ -1,0 +1,59 @@
+input::placeholder {
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+textarea::placeholder {
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-editor {
+  padding: 12px 25px !important;
+}

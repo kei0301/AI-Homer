@@ -1,0 +1,233 @@
+input::placeholder {
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+textarea::placeholder {
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: theme("colors.gray5");
+  font-weight: 400 !important;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-editor {
+  padding: 12px 25px !important;
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: linear-gradient(
+    180deg,
+    #dcdbd2 0%,
+    rgba(220, 219, 210, 0.6) 100%
+  );
+}
+
+.lato-family {
+  font-family: "Lato", sans-serif;
+}
+
+.space-family {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.merry-family {
+  font-family: "Merriweather", serif;
+}
+
+.btn-shadow {
+  box-shadow: 0px 0px 20px 0px rgba(48, 47, 39, 0.11);
+}
+
+.shadow-popup {
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
+}
+
+.k-img {
+  opacity: 0;
+}
+
+.k-Homer {
+  font-size: 7rem;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.k-m-IM {
+  font-size: 2rem !important;
+  text-align: left;
+  font-weight: 700;
+  width: 70%;
+}
+
+.k-IM {
+  font-size: 2rem !important;
+  width: 40%;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.9px;
+}
+
+.k-m-AI {
+  font-size: 2rem !important;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.k-AI {
+  font-size: 3rem !important;
+  font-weight: 400;
+  line-height: 4rem;
+  text-align: left;
+  width: 100%;
+  padding-top: 4rem;
+  padding-left: 45%;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.k-pos1 {
+  position: relative;
+}
+
+.k-pos2 {
+  position: relative;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  background: rgba(43, 43, 43, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.modal-xl {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.5rem;
+  width: 45em;
+  max-width: 100%; /* Ensure it does not exceed the screen width */
+  border-radius: 0.5rem;
+  overflow-y: auto; /* Enable scrolling for overflow content */
+}
+
+/* For mobile screens */
+@media (max-width: 640px) {
+  .modal-content {
+    width: 100%;
+    height: 100%; /* Make height also 100% */
+    top: 0; /* Align top to 0 */
+    left: 0; /* Align left to 0 */
+    transform: none; /* Remove transform to avoid offsetting */
+    border-radius: 0; /* Optional: remove border-radius for full screen */
+    padding: 1rem; /* Adjust padding if needed */
+  }
+}
+
+/* For tablet screens (between mobile and medium-sized screens) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .modal-content {
+    width: 100%; /* Make width 100% for tablets too */
+    padding: 2.5rem; /* Adjust padding if needed */
+  }
+}
+
+.close-button {
+  float: right;
+  font-size: 2em;
+  line-height: 1;
+  padding: 0 0.15em 0.15em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: var(--clr-neutral);
+  color: #5b566d;
+  transition: color 0.12s ease-in-out;
+  margin-top: 0.1em;
+}
+.close-button:hover {
+  color: var(--clr-main);
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 100;
+}
+
+.text-base {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
